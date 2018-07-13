@@ -1,0 +1,58 @@
+
+<!--单品信息 item  -->
+<template name="cell">
+  <view class='item'>
+    <!--选择框  -->
+    <image class='selection-icon'
+     src='{{is_selected?"../../images/sel_sel.png":"../../images/sel_nor.png"}}' bindtap='selectionAction' data-index='{{index}}'>
+    </image>
+    <!--商品图  {{productImage}}-->
+    <image class='product-icon'      src='{{productImage}}'></image>
+    <!--商品描述、数量选择  -->
+    <view class='item-desc'>
+      <!--商品名 {{productName}}  -->
+      <text class='name' style='font-size: 13px;'>{{productName}}</text>
+      <view class='color-size'>
+        <text style='font-size: 12px;'>颜色: </text>
+        <!--颜色 {{colourUrl}}  -->
+        <image src='{{colourUrl}}' style='width: 24rpx; height: 24rpx;'></image>
+        <text style='font-size: 12px;'>；</text>
+        <!--尺码 {{size}}  -->
+        <text style='font-size: 10px;'>尺码: {{size}};</text>
+      </view>
+      <view class='counter'>
+        <view class='counter-item' bindtap='subAction' data-index='{{index}}'>－</view>
+        <view class='counter-line'></view>
+        <!--数量 {{count}}  -->
+        <text class='counter-item'>{{count}}</text>
+        <view class='counter-line'></view>
+        <view class='counter-item' bindtap='addAction' data-index='{{index}}'>＋</view>
+      </view>
+    </view>
+    <!--商品售价、删除  -->
+    <view class='price-delete'>
+      <!--售价 {{salesPrice}}  -->
+      <text class='sale-price'>¥{{salesPrice}}</text>
+      <!--标价 {{tagPrice}}  -->
+      <text class='tag-price'>¥{{tagPrice}}</text>
+      <image class='delete-icon' src='../../images/delete.jpeg' bindtap='deleteAction' data-index='{{index}}'></image>
+    </view>
+  </view>
+</template>
+
+<view class='container'>
+<!--传入购物车列表数据  -->
+  <block wx:for="{{shopping_list}}" wx:key="shopping_list">
+    <template is="cell" data="{{...item,index}}"></template>
+  </block>
+  <view class='bottom-line'></view>
+</view>
+
+<!--底部结算栏  -->
+<view class='bottom-line-view'></view>
+<view class='bottom-view'>
+  <image class='all-selection-icon' src='{{is_all_selected?"../../images/sel_sel.png":"../../images/sel_nor.png"}}' bindtap='selectedAllAction'></image>
+  <text class='total-count'>全选 ({{selected_count}})</text>
+  <text class='total-money'>¥{{total_money}}</text>
+  <button class='buy' bindtap='buyAction' >结 算</button>
+</view>

@@ -1,0 +1,52 @@
+<!--鞋服配  -->
+<template name = "classifies">
+  <view class = 'classifies_view'>
+    <image src = '{{logo}}'></image>
+  </view>
+</template>
+<!--组件 <必买清单 一周搭配>  -->
+<template name = "match_item">
+    <view class = 'match_item_place_top'></view>
+    <view class = 'match_item_view'>
+      <text>{{title}} | {{enTitle}}</text>
+      <view class = 'match_item_place_bottom'></view>
+      <image src = '{{imgUrl}}' bindtap='match_itemClicked' data-title='{{title}}' style='width: 710rpx; height: 504rpx;'></image>    
+    </view>
+</template>
+
+<!--场景  -->
+<view class='container'>
+  <swiper class='banner'
+          autoplay='true'
+          indicator-dots='true'
+          interval='2500'
+          circular='true' 
+          >
+    <block wx:for="{{banner_data}}" wx:key = "banner_data">
+      <swiper-item>
+        <image src="{{item.imgUrl}}" id='{{item.imageTextId}}' data-type='{{item.type}}' bindtap='itemClicked'/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--鞋服配  -->
+  <!-- <block wx:for="{{classifies}}" wx:key = "classifies">
+    <template is="classifies" data="{{...item}}"></template>
+  </block> -->
+
+  <!--必买清单  -->
+  <template is = "match_item" data="{{...mustBuyList}}"></template> 
+  <!--一周搭配  -->
+  <template is = "match_item" data="{{...xingluMatch}}"></template>
+  <!--底部留白  -->
+  <view style='width: 100%; height: 60rpx; background-color: #fff'></view>
+
+
+
+
+
+
+
+
+
+</view>

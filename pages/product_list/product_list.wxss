@@ -1,0 +1,22 @@
+.top-image {
+  width: 750rpx;
+  height: 504rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+/*scale = 0.46  */
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
+
+}

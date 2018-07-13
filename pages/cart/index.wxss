@@ -1,0 +1,154 @@
+
+/*  cell  */
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 240rpx;
+  margin-top: 20rpx;
+  background-color: #fff; 
+}
+/*选择框  */
+.selection-icon {
+  margin-left: 20rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+/*产品图  */
+.product-icon{
+  width: 150rpx; 
+  height: 180rpx;
+}
+/*商品描述  */
+.item-desc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 30rpx;
+  width: 300rpx;
+  height: 180rpx;
+}
+/*颜色&尺码  */
+.color-size {
+  position: absolute;
+  bottom: 50rpx;
+  width: 100%;
+  height: 50rpx;
+}
+/*数量选择器  */
+.counter {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #000; 
+  width: 182rpx; 
+  border-radius: 6rpx;
+  margin-top: 20rpx;
+}
+/*加减&数量  */
+.counter-item {
+  font-size: 14px; 
+  width: 60rpx; 
+  height: 40rpx; 
+  text-align: center;
+}
+/*竖线  */
+.counter-line {
+  height: 40rpx; 
+  width: 1px; 
+  background-color: #000;
+}
+/*价格&删除  */
+.price-delete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: flex-end;
+  width: 150rpx;
+  height: 180rpx;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}
+/*售价  */
+.sale-price {
+  font-size: 14px;
+  font-weight: bold; 
+}
+/*标价  */
+.tag-price {
+  font-size: 12px;
+  color: #d32433;
+  text-decoration: line-through;
+}
+/*删除  */
+.delete-icon {
+  position: absolute;
+  bottom: 0;
+  width: 64rpx; 
+  height: 64rpx;
+}
+/*  cell  */
+
+page {
+  background-color: #f5f5f5;
+}
+.bottom-line {
+  width: 100%;
+  height: 120rpx;
+}
+
+.bottom-line-view {
+  position: fixed;
+  left: 0; bottom: 90rpx;
+  width: 100%;
+  height: 1px;
+  background-color: #f1f1f1;
+}
+.bottom-view {
+  position: fixed;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+}
+.all-selection-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.total-count {
+  margin-left: 30rpx;
+  font-size: 14px;
+  width: 130rpx;
+  color: #646363; 
+}
+
+.buy {
+  margin-right: 20rpx;
+  width: 120rpx;
+  height: 60rpx;
+  font-size: 13px;
+  padding: 0;
+  line-height: 60rpx;
+  background-color: #d32433;
+  color: #fff;
+}
+.button-hover {
+  opacity: 0.8;
+}
+.total-money {
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 14px;
+  margin-left: 224rpx;
+  text-align: right;
+  font-weight: bold;
+}

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/category/index",
+    "pages/cart/index",
+    "pages/personal/index",
+    "pages/web/web",
+    "pages/home/must_have/must_have",
+    "pages/home/week_look/week_look",
+    "pages/item_detail/item_detail",
+    "pages/product_list/product_list",
+    "pages/cart/order_pay/order_pay"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "商城首页",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9"
+  },
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/index",
+      "text": "首页",
+      "iconPath": "images/index1.png",
+      "selectedIconPath": "images/index.png"
+    },
+    {
+      "pagePath": "pages/category/index",
+      "text": "分类",
+      "iconPath": "images/type1.png",
+      "selectedIconPath": "images/type.png"
+    },
+    {
+      "pagePath": "pages/cart/index",
+      "text": "购物车",
+      "iconPath": "images/cart1.png",
+      "selectedIconPath": "images/cart.png"
+    },
+    {
+      "pagePath": "pages/personal/index",
+      "text": "个人中心",
+      "iconPath": "images/center1.png",
+      "selectedIconPath": "images/center.png"
+    }
+    ]
+  }
+}

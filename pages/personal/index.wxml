@@ -1,0 +1,38 @@
+
+<template name></template>
+<view class='container'>
+
+<view class='unlogin' wx:if="{{!is_login}}">
+  <view class='desc' style='margin-top: 40rpx; font-size: 13px; color: darkgray; text-align: center;'>点击登录重新授权</view>
+  <button class='login-button' bindgetuserinfo='bindGetUserInfo' open-type='getUserInfo' size='mini'>马上登陆</button>
+</view>
+
+<view class='login' wx:if="{{is_login}}">
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <view class='name'>{{userInfo.nickName}}</view>
+</view>
+
+<!--收货地址 优惠券  -->
+<view class='adres-coupon'>
+  <view class='adres'>收货地址</view>
+  <view class='middle-line' style='width: 1px; height: 80rpx; margin-top: 10rpx; background-color: #000;'></view>
+  <view class='coupon'>优惠券</view>
+</view>
+
+<!--订单  -->
+<view class='order-list'>
+  <block wx:for="{{order_list}}" wx:key="order_list">  
+    <view class='order-item'>{{item}}</view>
+  </block>
+</view>
+
+<!--列表  -->
+<block wx:for="{{list}}" wx:key="list">
+  <view class='bg-view' style='background-color:#fff;'>
+    <view class='list-item'>{{item}}</view>
+    <view class='line' style='height: 1px; width: 730rpx; margin-left: 20rpx; background-color: #f5f5f5;'></view>
+  </view>
+  
+</block>
+
+</view>

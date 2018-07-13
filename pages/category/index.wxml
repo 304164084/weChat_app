@@ -1,0 +1,53 @@
+<view class='container'>
+  <!--左侧 scrol  -->
+  <template name="left-item">
+    <view class='{{selected? "selected-item" : "normal-item"}}' bindtap='clickedLeftItem' data-index='{{index}}'>
+      <!--  -->
+      <view class='ver-line' wx:if="{{selected}}"></view>
+      <view class='classify'>{{typeName}}</view>
+    </view>
+  </template>
+  <scroll-view class='left-scrol'>
+    <block wx:for="{{leftData}}" wx:key="leftData">
+      <template is="left-item" data="{{...item,index}}"></template>
+    </block>
+  </scroll-view>
+
+  <!-- 封装组件  -->
+  <!--鞋、服、配  -->
+  <template name="ordinary">
+    <image class='top-image' src='{{imageUrl}}' style='margin-top: 30rpx; margin-left: 28.25rpx; margin-bottom: 20rpx; width: 506rpx; height: 300rpx;' wx:if="{{showStatus}}"></image>
+    <view class='items'>
+      <block wx:for="{{list}}" wx:key="list">
+        <view class="item" bindtap='ordinaryItemClicked' data-info='{{item}}'>
+          <!--icon  -->
+          <image class='icon' src='{{item.imageUrl}}' style='height:136rpx; width: 136rpx;'></image>
+          <!--name  -->
+          <view class='name' style='width: 136rpx; text-align: center; font-size: 10px; '>{{item.productName}}</view>
+        </view>
+      </block>
+    </view>
+  </template>
+  <!--  -->
+  <!--特惠区  -->
+  <template name="special">
+    <image class='top-image' src='{{imageUrl}}' style='margin-top: 30rpx; margin-left: 28.25rpx; margin-bottom: 20rpx; width: 506rpx; height: 300rpx;' wx:if="{{showStatus}}"></image>
+    <view class='items'>
+      <block wx:for="{{list}}" wx:key="list">
+        <view class="special-item" bindtap='specialItemClicked' data-info='{{item}}'>
+          <!--icon  -->
+          <image class='icon' src='{{item.imageUrl}}' style='height:307.2rpx; width: 256rpx;'></image>
+          <!--name  -->
+          <view class='name' style='width: 256rpx; text-align: center; font-size: 10px; '>{{item.productName}}</view>
+          <view class='price' style='width: 256rpx; text-align: center; font-size: 10px; font-weight: bold;'>¥{{item.price}}</view>
+        </view>
+      </block>
+    </view>
+  </template>
+  <!--右侧 scrol  -->
+  <scroll-view class='right-scrol' scroll-y>
+    <block wx:for="{{rightData}}" wx:key="rightData">
+      <template is='{{selected_is_special?"special":"ordinary"}}' data="{{...item}}"></template>
+    </block>
+  </scroll-view>
+</view>

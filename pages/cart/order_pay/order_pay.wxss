@@ -1,0 +1,130 @@
+page {
+  background-color: #f5f5f5;
+}
+/*已有收货地址  */
+.address-exist {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 30rpx;
+  
+}
+.item {
+  width: 668rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.name-phone {
+  display: flex;
+  flex-direction: row;
+}
+.name {
+  margin-left: 20rpx;
+  font-size: 23px;
+  font-weight: bold;
+}
+.phone {
+  margin-left: 40rpx;
+  font-size: 23px;
+  font-weight: bold;
+}
+.address {
+  margin-left: 20rpx;
+  /* font-size: 14px; */
+  /* color: #646363; */
+}
+.item-pionting {
+  position: absolute;
+  height: 80rpx;
+  font-size: 20px;
+  line-height: 80rpx;
+  text-align: right;
+  margin-left: 700rpx;
+}
+/*已有收货地址  */
+
+/*未填收货地址  */
+.address-unexist {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+}
+
+.disc {
+  position: absolute;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 50rpx;
+  font-size: 14px;
+  color: #646363;
+  text-align: center;
+}
+.pionting {
+  height: 80rpx;
+  font-size: 20px;
+  line-height: 80rpx;
+  text-align: right;
+  margin-left: 700rpx;
+}
+/*支付方式  */
+.pay-way {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  align-self: center;
+  width: 52rpx;
+  height: 16rpx;
+  margin-left: 678rpx;
+}
+
+
+
+.bottom-view {
+  position: fixed;
+  left: 0; bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+}
+.total-price {
+  font-size: 17px;
+  color: #d32433;
+
+}
+.buy-count {
+  position: absolute;
+  width: 180rpx;
+  height: 100rpx;
+  margin-left: 360rpx;
+
+  font-size: 12px;
+  line-height: 100rpx;
+  text-align: right;
+  color: #646363; 
+}
+.buy {
+  position: absolute;
+  background-color: #e43c22;
+  width: 202rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 550rpx;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}

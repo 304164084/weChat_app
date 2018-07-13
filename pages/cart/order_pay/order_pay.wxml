@@ -1,0 +1,52 @@
+
+
+<!--已有收货地址  -->
+<template name="address-exist">
+<view class='address-exist'>
+
+  <view class='item'>
+    <view class='name-phone'>
+      <!--姓名  -->
+      <view class='name'>张三王五</view>
+      <!--电话  -->
+      <view class='phone'>12345678900</view>
+    </view>
+    <!--address  -->
+    <rich-text class='address' nodes="{{addrs}}"></rich-text>
+  </view>
+  <!-- <view class='item-pionting'>＞</view> -->
+  <image class='icon' src='../../../images/three_points.png' style="width: 52rpx; height: 16rpx;"></image>
+
+</view>
+</template>
+<view class='container'>
+  <!--收货地址  -->
+  <view class='address-unexist'>
+    <view class='disc'>请填写收货地址</view>
+    <!-- <view class='pionting'>＞</view> -->
+    <image class='icon' src='../../../images/three_points.png' style="width: 52rpx; height: 16rpx;"></image>
+  </view>
+  <template is="address-exist" data="{{addrs}}"></template>
+
+  <!--pay way  -->
+  <!-- <view class='pay-way'>
+    <view class='pay'>支付方式</view>
+    <view class='way'>{{pay_way}}</view>
+    <image class='icon' src='../../../images/three_points.png' style="width: 52rpx; height: 16rpx;"></image>
+  </view> -->
+
+  <!--product list  -->
+  <view class='items'>
+  </view>
+
+  <!--  -->
+
+</view>
+
+<!--底栏 总计、提交  -->
+<view class='bottom-view'>
+  <view style='font-size: 13px; color: #d32433; margin-left: 20rpx;'>¥</view>
+  <view class='total-price'>{{total_price}}</view>
+  <view class='buy-count'>共{{buy_count}}件商品</view> 
+  <view class='buy'>提交订单</view>
+</view>

@@ -1,0 +1,48 @@
+<template name = "extension">
+  <view class='extension_view'>
+    <image src='{{imageUrl}}'></image>
+  </view>
+</template>
+
+<view class='container'>
+  <!-- 一周推荐  -->
+  <block wx:for = "{{dataSource}}" wx:key = "dataSource">
+    <view class='title'>
+      <text style='background-color: #000; color: #fff; font-size: 17px;'>{{item.week}}</text>
+      <text style='font-size: 17px; padding-left: 20rpx;'>{{item.title}}</text> 
+    </view>
+    <text style='margin-top: 40rpx; margin-left: 20rpx; margin-right: 20rpx; font-size: 13px;'>{{item.describes}}</text>
+    <!-- 带有交互的图片  showItems -->
+    <image style='width: 740rpx; height: 550rpx; margin-left: 5rpx;' bindtap='showItems' data-id='{{item.id}}' data-index='{{index}}' src='{{item.imgUrl}}'></image>
+    <!-- detail items  -->
+    <view class='extension_view' hidden='{{item.hidden}}'>
+        <block wx:for = "{{item.pros}}" wx:key = "pros">
+          <view class='pros-item' bindtap='showDetail' data-id='{{item.productId}}' data-colourId='{{item.colourId}}'>
+            <image class='pros_image' src='{{item.imageUrl}}'></image>
+            <text style=' margin-top: 10rpx; font-size: 12px; font-weight: bold;'>{{item.productName}}</text>
+          </view>
+        </block>  
+    </view>
+  </block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

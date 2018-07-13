@@ -1,0 +1,57 @@
+
+
+
+
+<view class='container'>
+  <!--顶图  -->
+  <view><image class='topImage' src='{{topImage}}'></image></view>
+  
+  <!--商品  -->
+  <block wx:for = "{{reponseBuyListTemps}}" wx:key = "reponseBuyListTemps">
+    <!--商品名称  -->
+    <view class='sction_des'>
+      <text style='color:#c39e6d; font-size: 20px; margin-top: 20rpx; text-align: center;'>{{item.title}}</text>
+      <text style='font-size: 14px; text-align: center;'>{{item.productName}}</text> 
+      <block wx:for = "{{item.images}}" wx:key = "images">
+        <image class='image' src='{{item.image}}'></image>
+        <!--文字如何左对齐？？？  -->
+        <text style='font-size: 13px; margin-top: 10rpx; margin-left: 30rpx; margin-right: 30rpx;'>{{item.content}}</text> 
+      </block>
+      <!--视频路径问题... 不知道为什么在网页上播放显示黑屏 有声音  -->
+      <video class='video' src='{{item.videoUrl}}' poster='{{item.videoImage}}'></video>
+      <text style='font-size: 14px; margin-left:30rpx;'>视频欣赏</text>
+      <image class='image' src='{{item.productImage}}' style=''></image>
+      <text style='font-size: 14px; text-align: center; font-weight: bold; margin-top: 10rpx;'>{{item.productName}}</text> 
+      <text style='font-size: 14px; text-align: center; font-weight: bold; margin-top: 10rpx; color: #b40f18'>{{item.salePrice}}</text>
+      <button style='margin-top: 30rpx; background-color: #b99667' type="warn" size='mini' bindtap='knowMore' data-barcode='{{item.barcode}}'>了解更多</button>
+      <!--底线  -->
+      <view style='height:1px; margin-top: 40rpx; margin-left: 10rpx; margin-right: 10rpx; background-color: #f2f2f2;'></view>
+    </view>
+  </block>
+  <view style='height: 60rpx; width: 100%; background-color: #fff;'></view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

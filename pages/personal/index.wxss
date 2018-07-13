@@ -1,0 +1,80 @@
+
+page {
+  background-color: #f5f5f5;
+}
+.unlogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: pink;
+}
+.login-button {
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  background-color: white;
+  border: 1px solid #000;
+  font-size: 15px;
+   height: 60rpx; 
+  border-radius: 30rpx;
+}
+.login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: red;
+}
+.avatar {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  margin-left: 20rpx;
+  width: 132rpx; 
+  height: 132rpx; 
+  border-radius: 66rpx;
+  background-color: darkgray;
+}
+.name {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  align-self: flex-start;
+}
+/*收货地址 & 优惠券  */
+.adres-coupon {
+  display: flex;
+  flex-direction: row;
+  background-color: yellow;
+  height: 100rpx;
+  align-items: center;
+}
+.adres {
+  width: 50%;
+  font-size: 16px;
+  text-align: center;
+}
+.coupon {
+  width: 50%;
+  font-size: 16px;
+  text-align: center;
+}
+/*订单列表  */
+.order-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: greenyellow;
+  height: 120rpx;
+}
+.order-item {
+  font-size: 15px;
+}
+
+/*列表  */
+.list-item {
+  font-size: 16px;
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}

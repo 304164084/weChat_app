@@ -1,0 +1,13 @@
+<view>
+  <image class='top-image' src='{{resultData.bar_imageUrl}}'></image>
+  <view class='items'>
+    <block wx:for="{{resultData.productLists}}" wx:key="products">
+      <view class='item' bindtap='itemClicked' data-colourid='{{item.colourId}}' data-id='{{item.productId}}'>
+        <image class='icon' src='{{item.imageUrl}}' style='width: 345rpx; height: 414rpx;'></image>
+        <view class='name' style='width: 345rpx; font-size: 12px; color: #969696; text-align: center;'>{{item.productName}}</view>
+        <view class='price' style='width: 345rpx; font-size: 11px; color: #000; font-weight: bold; text-align: center;'>¥{{item.price}}</view>
+      </view>
+    </block>
+  </view>
+  
+</view>
